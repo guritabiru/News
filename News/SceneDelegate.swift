@@ -17,6 +17,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let homeVC = addTabBarItem(title: "Home", identifier: "HomeVC", selectedImage: "house.fill", image: "house")
+        
+        
+        let tabBarController = UITabBarController()
+        tabBarController.tabBar.backgroundColor = UIColor.white
+        tabBarController.viewControllers = [homeVC]
+        
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,6 +57,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    func addTabBarItem(title: String, identifier: String, selectedImage: String, image: String) -> UIViewController{
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarItemVC = storyboard.instantiateViewController(withIdentifier: identifier)
+        tabBarItemVC.tabBarItem.title = title
+        tabBarItemVC.tabBarItem.selectedImage = UIImage(systemName: selectedImage)
+        tabBarItemVC.tabBarItem.image = UIImage(systemName: image)
+        let navigation = UINavigationController(rootViewController: tabBarItemVC)
+        
+        return navigation
+    }
 }
 
