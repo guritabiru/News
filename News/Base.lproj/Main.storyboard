@@ -125,6 +125,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Read More" cornerStyle="medium"/>
+                                <connections>
+                                    <action selector="readMoreBtnTapped:" destination="JXV-Y6-iGt" eventType="touchUpInside" id="goL-Os-2zn"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUK-ny-wbc">
                                 <rect key="frame" x="12" y="476.5" width="390" height="345.5"/>
@@ -169,6 +172,7 @@
                         <outlet property="articleImg" destination="2ND-EY-eCF" id="9tp-bc-gzH"/>
                         <outlet property="articleSourceLbl" destination="rvw-kj-A2p" id="hL1-9n-qm5"/>
                         <outlet property="articleTItleLbl" destination="Pcc-hV-ixi" id="CI2-Lg-Igc"/>
+                        <outlet property="readMoreBtn" destination="arA-hW-kgc" id="TfI-5E-Ckd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Csg-hu-Sw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

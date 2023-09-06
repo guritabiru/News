@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import SafariServices
 
 class ArticleDetailVC: UIViewController {
 
@@ -14,6 +15,7 @@ class ArticleDetailVC: UIViewController {
     @IBOutlet weak var articleTItleLbl: UILabel!
     @IBOutlet weak var articleSourceLbl: UILabel!
     @IBOutlet weak var articleDescriptionLbl: UITextView!
+    @IBOutlet weak var readMoreBtn: UIButton!
     
     var articleData = Article()
     
@@ -35,6 +37,16 @@ class ArticleDetailVC: UIViewController {
         articleSourceLbl.text = articleData.source?.name != nil ? "by \(articleData.source?.name ?? "")" : ""
         articleDescriptionLbl.text = articleData.description
         articleDescriptionLbl.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        readMoreBtn.isEnabled = articleData.url != nil ? true : false
     }
 
+    @IBAction func readMoreBtnTapped(_ sender: Any) {
+        if let url = URL(string: articleData.url ?? "") {
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+            
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+        }
+    }
 }
