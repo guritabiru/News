@@ -179,6 +179,51 @@
             </objects>
             <point key="canvasLocation" x="2066.666666666667" y="118.52678571428571"/>
         </scene>
+        <!--SearchVC-->
+        <scene sceneID="CMi-Ub-7Lg">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" id="iny-QN-jLh" customClass="SearchVC" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gYj-8T-mCz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFy-Zo-iEa">
+                                <rect key="frame" x="186" y="438" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lDP-XF-pgk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kNZ-bQ-xfd">
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yCC-ql-cXc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lDP-XF-pgk" firstAttribute="leading" secondItem="yCC-ql-cXc" secondAttribute="leading" id="1ne-Uy-RQP"/>
+                            <constraint firstItem="yCC-ql-cXc" firstAttribute="trailing" secondItem="kNZ-bQ-xfd" secondAttribute="trailing" id="1zo-te-a8u"/>
+                            <constraint firstItem="lDP-XF-pgk" firstAttribute="top" secondItem="yCC-ql-cXc" secondAttribute="top" id="7fy-PN-JVr"/>
+                            <constraint firstItem="kNZ-bQ-xfd" firstAttribute="leading" secondItem="yCC-ql-cXc" secondAttribute="leading" id="EmZ-YQ-BBh"/>
+                            <constraint firstItem="yCC-ql-cXc" firstAttribute="bottom" secondItem="kNZ-bQ-xfd" secondAttribute="bottom" id="VfC-vi-aYa"/>
+                            <constraint firstItem="kNZ-bQ-xfd" firstAttribute="top" secondItem="lDP-XF-pgk" secondAttribute="bottom" id="Wrp-0E-pW2"/>
+                            <constraint firstItem="lDP-XF-pgk" firstAttribute="trailing" secondItem="yCC-ql-cXc" secondAttribute="trailing" id="gkB-vi-zvO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="articlesTableView" destination="kNZ-bQ-xfd" id="Tkd-xS-W5R"/>
+                        <outlet property="searchBar" destination="lDP-XF-pgk" id="rKX-ih-6fJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kwl-GC-r1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3137" y="122"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="labelColor">

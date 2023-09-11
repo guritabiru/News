@@ -19,11 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let homeVC = addTabBarItem(title: "Home", identifier: "HomeVC", selectedImage: "house.fill", image: "house")
+        let searchVC = addTabBarItem(title: "Search", identifier: "SearchVC", selectedImage: "magnifyingglass.circle.fill", image: "magnifyingglass.circle")
         
         
         let tabBarController = UITabBarController()
         tabBarController.tabBar.backgroundColor = UIColor.white
-        tabBarController.viewControllers = [homeVC]
+        tabBarController.viewControllers = [homeVC, searchVC]
         
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()

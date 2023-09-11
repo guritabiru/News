@@ -24,11 +24,11 @@ struct HomeViewModel {
     public func requestTopNews() {
         self.loading.onNext(true)
         let param = [
-            "apiKey": "c6eded46100e4bcfabd1890750d17250",
+            "apiKey": Credentials.apiKey,
             "pageSize": "6",
             "language": "en"
         ]
-        AF.request("https://newsapi.org/v2/top-headlines", method: .get,
+        AF.request("\(Endpoints.baseUrl)\(Endpoints.topHeadlines)", method: .get,
                    parameters: param
         ).responseJSON(completionHandler: { response in
             guard let data = response.data else {return}
@@ -45,12 +45,12 @@ struct HomeViewModel {
     public func requestRecommended() {
         self.loading.onNext(true)
         let param = [
-            "apiKey": "c6eded46100e4bcfabd1890750d17250",
+            "apiKey": Credentials.apiKey,
             "pageSize": "3",
             "country": "us",
             "page": "2"
         ]
-        AF.request("https://newsapi.org/v2/top-headlines", method: .get,
+        AF.request("\(Endpoints.baseUrl)\(Endpoints.topHeadlines)", method: .get,
                    parameters: param
         ).responseJSON(completionHandler: { response in
             guard let data = response.data else {return}

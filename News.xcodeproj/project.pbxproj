@@ -24,6 +24,9 @@
 		37C0D1B42AA212CF004697A6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0D1B32AA212CF004697A6 /* HomeViewModel.swift */; };
 		37C0D1B72AA5D65F004697A6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0D1B62AA5D65E004697A6 /* Extension.swift */; };
 		37C0D1B92AA6C566004697A6 /* ArticleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0D1B82AA6C566004697A6 /* ArticleDetailVC.swift */; };
+		37C0D1BB2AA97942004697A6 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0D1BA2AA97941004697A6 /* SearchVC.swift */; };
+		37C0D1BD2AA99991004697A6 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0D1BC2AA99991004697A6 /* SearchViewModel.swift */; };
+		37C0D1BF2AAEE7DA004697A6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C0D1BE2AAEE7D9004697A6 /* Constant.swift */; };
 		392D9A67997BD27E346D9CED /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092B3329F50092F4648D07C6 /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,9 @@
 		37C0D1B32AA212CF004697A6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		37C0D1B62AA5D65E004697A6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		37C0D1B82AA6C566004697A6 /* ArticleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailVC.swift; sourceTree = "<group>"; };
+		37C0D1BA2AA97941004697A6 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		37C0D1BC2AA99991004697A6 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		37C0D1BE2AAEE7D9004697A6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		4022D546BC3EBB1C0BF0A1DC /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
 		E410B659B84E976CBE75966D /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +147,8 @@
 		37C0D1A32AA0BD5C004697A6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				37C0D1BA2AA97941004697A6 /* SearchVC.swift */,
+				37C0D1BC2AA99991004697A6 /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				37C0D1B62AA5D65E004697A6 /* Extension.swift */,
+				37C0D1BE2AAEE7D9004697A6 /* Constant.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -315,14 +324,17 @@
 			files = (
 				37C0D1B92AA6C566004697A6 /* ArticleDetailVC.swift in Sources */,
 				37C0D1AD2AA1EE52004697A6 /* ArticleCell.swift in Sources */,
+				37C0D1BF2AAEE7DA004697A6 /* Constant.swift in Sources */,
 				37C0D1992AA0BAB9004697A6 /* Source.swift in Sources */,
 				37C0D1B12AA1EE80004697A6 /* TopNewsCell.swift in Sources */,
 				37C0D1B42AA212CF004697A6 /* HomeViewModel.swift in Sources */,
 				37C0D1B72AA5D65F004697A6 /* Extension.swift in Sources */,
 				37C0D1872A9DEC7E004697A6 /* HomeVC.swift in Sources */,
 				37C0D1832A9DEC7E004697A6 /* AppDelegate.swift in Sources */,
+				37C0D1BD2AA99991004697A6 /* SearchViewModel.swift in Sources */,
 				37C0D1852A9DEC7E004697A6 /* SceneDelegate.swift in Sources */,
 				37C0D19D2AA0BB24004697A6 /* Error.swift in Sources */,
+				37C0D1BB2AA97942004697A6 /* SearchVC.swift in Sources */,
 				37C0D19B2AA0BB18004697A6 /* Article.swift in Sources */,
 				37C0D19F2AA0BB38004697A6 /* Response.swift in Sources */,
 			);

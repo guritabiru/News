@@ -37,7 +37,6 @@ class ArticleCell: UITableViewCell {
         let date = dateFormater.date(from: article.publishedAt ?? "")
         
         articleTimeLbl.text = date?.timeAgoDisplay()
-        print(date?.timeAgoDisplay())
     }
     
 }
