@@ -20,11 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let homeVC = addTabBarItem(title: "Home", identifier: "HomeVC", selectedImage: "house.fill", image: "house")
         let searchVC = addTabBarItem(title: "Search", identifier: "SearchVC", selectedImage: "magnifyingglass.circle.fill", image: "magnifyingglass.circle")
+        let bookmarkVC = addTabBarItem(title: "Bookmark", identifier: "BookmarkVC", selectedImage: "bookmark.fill", image: "bookmark")
         
         
         let tabBarController = UITabBarController()
         tabBarController.tabBar.backgroundColor = UIColor.white
-        tabBarController.viewControllers = [homeVC, searchVC]
+        tabBarController.viewControllers = [homeVC, searchVC, bookmarkVC]
         
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
@@ -56,6 +57,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
     func addTabBarItem(title: String, identifier: String, selectedImage: String, image: String) -> UIViewController{

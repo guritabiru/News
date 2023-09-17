@@ -14,5 +14,5 @@ struct Endpoints {
 }
 
 struct Credentials {
-    static let apiKey = "YOUR_API_KEY"
+    static let apiKey = "c37fc17ca7c74ed181397ec5fa92dd21"
 }

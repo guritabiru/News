@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class HomeVC: UIViewController {
+class HomeVC: BaseParentTabBarVC {
 
     @IBOutlet weak var topNewsCollectionView: UICollectionView!
     @IBOutlet weak var recommendedTableView: UITableView!
@@ -26,7 +26,7 @@ class HomeVC: UIViewController {
         homeViewModel.requestRecommended()
     }
     
-    private func setupBinding() {
+    override func setupBinding() {
         homeViewModel
             .error
             .observeOn(MainScheduler.instance)
@@ -59,7 +59,7 @@ class HomeVC: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    private func setupView() {
+    override func setupView() {
         let recommendedNib = UINib(nibName: "ArticleCell", bundle: nil)
         recommendedTableView.register(recommendedNib, forCellReuseIdentifier: "articleCell")
         recommendedTableView.dataSource = self
@@ -78,15 +78,6 @@ class HomeVC: UIViewController {
         articleDetailView.articleData = article
         self.navigationController?.pushViewController(articleDetailView, animated: true)
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        self.hidesBottomBarWhenPushed = false
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.hidesBottomBarWhenPushed = true
-    }
-
 
 }
 

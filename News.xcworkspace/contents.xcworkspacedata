@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/bimo/Documents/Bimo/Workspace/RHS/BismillahIOS2023/UIKit/News/News/CoreData/Article2+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/bimo/Documents/Bimo/Workspace/RHS/BismillahIOS2023/UIKit/News/News/CoreData/Article2+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:News.xcodeproj">
    </FileRef>
    <FileRef

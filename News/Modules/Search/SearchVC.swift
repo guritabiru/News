@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 
-class SearchVC: UIViewController {
+class SearchVC: BaseParentTabBarVC {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var articlesTableView: UITableView!
@@ -17,14 +17,7 @@ class SearchVC: UIViewController {
     let disposeBag = DisposeBag()
     private var articlesData = [Article]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupView()
-        setupBinding()
-    }
-    
-    private func setupView() {
+    override func setupView() {
         searchBar.delegate = self
         articlesTableView.delegate = self
         articlesTableView.dataSource = self
@@ -33,7 +26,7 @@ class SearchVC: UIViewController {
         articlesTableView.register(nib, forCellReuseIdentifier: "articleCell")
     }
     
-    private func setupBinding() {
+    override func setupBinding() {
         searchViewModel.searchResult
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { articles in
@@ -55,14 +48,6 @@ class SearchVC: UIViewController {
         let articleDetailView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ArticleDetailVC") as! ArticleDetailVC
         articleDetailView.articleData = article
         self.navigationController?.pushViewController(articleDetailView, animated: true)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        self.hidesBottomBarWhenPushed = false
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.hidesBottomBarWhenPushed = true
     }
 
 }
